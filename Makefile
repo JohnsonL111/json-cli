@@ -22,6 +22,9 @@ docker-lint:
 test:
 	@php -derror_reporting="E_ALL & ~E_DEPRECATED" vendor/bin/phpunit
 
+test-verbose:
+	@php -derror_reporting="E_ALL & ~E_DEPRECATED" vendor/bin/phpunit --debug --testdox -v
+
 test-coverage:
 	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-text
 
