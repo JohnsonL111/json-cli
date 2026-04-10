@@ -3,10 +3,11 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\Replace;
 use Yaoi\Cli\Response;
 
-class ReplaceTest extends \PHPUnit_Framework_TestCase
+class ReplaceTest extends TestCase
 {
     public function testReplace()
     {

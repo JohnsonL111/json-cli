@@ -22,7 +22,7 @@
     "swaggest/json-schema-maker": "^0.3.7"
   },
   "require-dev": {
-    "phperf/phpunit": "4.8.38"
+    "phpunit/phpunit": "^10.5"
   },
   "autoload": {
     "psr-4": {
@@ -35,9 +35,6 @@
     }
   },
   "config": {
-    "platform": {
-      "php": "5.6.0"
-    }
   },
   "bin": [
     "bin/json-cli"

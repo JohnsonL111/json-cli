@@ -9,7 +9,7 @@
 
 
 
-### <a id="componentsmessagesdimlightpayload"></a>ComponentsMessagesDimLightPayload
+### <a id="componentsmessagesdimlightpayload"></a> ComponentsMessagesDimLightPayload
 
 
 
@@ -19,7 +19,7 @@
 |`sentAt`    |`String`, Format: `date-time`                                      |Date and time when the message was sent (updated).|
 
 
-### <a id="componentsmessageslightmeasuredpayload"></a>ComponentsMessagesLightMeasuredPayload
+### <a id="componentsmessageslightmeasuredpayload"></a> ComponentsMessagesLightMeasuredPayload
 
 
 
@@ -29,7 +29,7 @@
 |`sentAt`|`String`, Format: `date-time`                                        |Date and time when the message was sent (updated).|
 
 
-### <a id="componentsmessagesturnonoffpayload"></a>ComponentsMessagesTurnOnOffPayload
+### <a id="componentsmessagesturnonoffpayload"></a> ComponentsMessagesTurnOnOffPayload
 
 
 
@@ -39,7 +39,7 @@
 |`sentAt` |`String`, Format: `date-time`|Date and time when the message was sent (updated).|
 
 
-### <a id="dimlightpayloadpercentage"></a>DimLightPayloadPercentage
+### <a id="dimlightpayloadpercentage"></a> DimLightPayloadPercentage
 Percentage to which the light should be dimmed to.
 
 |Constraint|Value|
@@ -50,7 +50,7 @@ Percentage to which the light should be dimmed to.
 
 
 
-### <a id="lightmeasuredpayloadlumens"></a>LightMeasuredPayloadLumens
+### <a id="lightmeasuredpayloadlumens"></a> LightMeasuredPayloadLumens
 Light intensity measured in lumens (updated).
 
 |Constraint|Value|

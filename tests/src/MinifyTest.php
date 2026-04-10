@@ -3,10 +3,11 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\Minify;
 use Yaoi\Cli\Response;
 
-class MinifyTest extends \PHPUnit_Framework_TestCase
+class MinifyTest extends TestCase
 {
     public function testMinify()
     {

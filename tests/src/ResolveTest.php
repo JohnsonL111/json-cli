@@ -3,10 +3,11 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\Resolve;
 use Yaoi\Cli\Response;
 
-class ResolveTest extends \PHPUnit_Framework_TestCase
+class ResolveTest extends TestCase
 {
     public function testResolve()
     {

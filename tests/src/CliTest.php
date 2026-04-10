@@ -2,6 +2,7 @@
 
 namespace Swaggest\JsonCli\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\App;
 use Swaggest\JsonCli\Apply;
 use Swaggest\JsonCli\Diff;
@@ -10,7 +11,7 @@ use Swaggest\JsonCli\Rearrange;
 use Yaoi\Cli\Command\Application\Runner;
 use Yaoi\Cli\Response;
 
-class CliTest extends \PHPUnit_Framework_TestCase
+class CliTest extends TestCase
 {
     public function testApply()
     {

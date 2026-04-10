@@ -23,7 +23,10 @@ test:
 	@php -derror_reporting="E_ALL & ~E_DEPRECATED" vendor/bin/phpunit
 
 test-verbose:
-	@php -derror_reporting="E_ALL & ~E_DEPRECATED" vendor/bin/phpunit --debug --testdox -v
+	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage --debug --testdox -v
+
+test-coverage-docker:
+	@docker run --rm -v $(shell pwd):/app -w /app php:7.4-cli bash -lc "set -eux; apt-get update; apt-get install -y unzip git && pecl install xdebug-2.9.8 || true; docker-php-ext-enable xdebug; curl -sS https://getcomposer.org/installer | php; mv composer.phar /usr/local/bin/composer; composer install --no-interaction; php -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage"
 
 test-coverage:
 	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-text

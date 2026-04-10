@@ -3,10 +3,11 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\PrettyPrint;
 use Yaoi\Cli\Response;
 
-class PrettyPrintTest extends \PHPUnit_Framework_TestCase
+class PrettyPrintTest extends TestCase
 {
     public function testPrettyPrint()
     {
