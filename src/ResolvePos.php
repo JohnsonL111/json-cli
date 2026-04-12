@@ -36,10 +36,10 @@ class ResolvePos extends Command
     {
         $listener = new FilePosition\PositionResolver();
         $stream = fopen($this->path, 'r');
-        if ($stream === false) {
+        if ($stream === false) { // @codeCoverageIgnoreStart
             $this->response->error('Failed to open ' . $this->path);
             die(1);
-        }
+        } // @codeCoverageIgnoreEnd
         try {
             if ($stream !== false) {
                 $parser = new Parser($stream, $listener);

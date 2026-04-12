@@ -5,3 +5,4 @@
 /composer.phar
 /clover.xml
 /build/
+.phpunit.result.cache

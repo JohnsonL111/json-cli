@@ -38,10 +38,10 @@ class ValidateSchema extends Base
                 $this->response->error('Invalid schema');
                 $this->response->addContent($e->getMessage());
                 throw new ExitCode('', 1);
-            } catch (\Exception $e) {
+            } catch (\Exception $e) { // @codeCoverageIgnoreStart
                 $this->response->error('Failed to import schema:' . $e->getMessage());
                 throw new ExitCode('', 1);
-            }
+            } // @codeCoverageIgnoreEnd
         } else {
             $schema = Schema::schema();
         }

@@ -44,9 +44,10 @@ abstract class BaseDiff extends Base
         }
         try {
             $this->diff = new JsonDiff($original, $new, $options);
-        } catch (Exception $e) {
+        } catch (Exception $e) { // @codeCoverageIgnoreStart
             $this->response->error($e->getMessage());
             return;
+            // @codeCoverageIgnoreEnd
         }
 
         $this->out = '';

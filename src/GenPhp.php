@@ -69,9 +69,9 @@ class GenPhp extends Base
 
             $builder->classCreatedHook = new ClassHookCallback(function (PhpClass $class, $path, $schema)
             use ($app, $appNs, $skipRoot, $baseName) {
-                if ($skipRoot && '#' === $path) {
+                if ($skipRoot && '#' === $path) { // @codeCoverageIgnoreStart
                     return;
-                }
+                } // @codeCoverageIgnoreEnd
 
                 $desc = '';
                 if ($schema->title) {

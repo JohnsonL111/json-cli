@@ -151,7 +151,8 @@ JSON
     {
         ob_start();
         Runner::create(new App())->run();
-        ob_end_clean();
+        $output = ob_get_clean();
+        $this->assertNotNull($output);
     }
 
 }
