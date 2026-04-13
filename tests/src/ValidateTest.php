@@ -3,11 +3,12 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\ExitCode;
 use Swaggest\JsonCli\ValidateSchema;
 use Yaoi\Cli\Response;
 
-class ValidateTest extends \PHPUnit_Framework_TestCase
+class ValidateTest extends TestCase
 {
     public function testValidate()
     {
@@ -19,7 +20,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
         $d->performAction();
         $res = ob_get_clean();
 
-        $this->assertContains(
+        $this->assertStringContainsString(
             'Data is valid',
             $res
         );
@@ -35,7 +36,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
         $d->performAction();
         $res = ob_get_clean();
 
-        $this->assertContains(
+        $this->assertStringContainsString(
             'Data is valid',
             $res
         );
@@ -54,7 +55,7 @@ class ValidateTest extends \PHPUnit_Framework_TestCase
             $res = ob_get_clean();
             $this->assertSame(1, $e->getCode());
 
-            $this->assertContains(
+            $this->assertStringContainsString(
                 'Data is invalid',
                 $res
             );

@@ -4,3 +4,5 @@
 /json-cli.tar.gz
 /composer.phar
 /clover.xml
+/build/
+.phpunit.result.cache

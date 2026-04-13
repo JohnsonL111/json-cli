@@ -3,10 +3,11 @@
 namespace Swaggest\JsonCli\Tests;
 
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\GenJson;
 use Yaoi\Cli\Response;
 
-class GenJsonTest extends \PHPUnit_Framework_TestCase
+class GenJsonTest extends TestCase
 {
     public function testGenJson()
     {

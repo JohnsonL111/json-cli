@@ -143,7 +143,7 @@ class BuildSchema extends Base
                     $maker->addInstanceValue($item);
                 }
                 if (!feof($handle)) {
-                    echo "Error: unexpected fgets() fail\n";
+                    echo "Error: unexpected fgets() fail\n"; // @codeCoverageIgnore
                 }
                 fclose($handle);
             }
@@ -165,9 +165,9 @@ class BuildSchema extends Base
 
         if ($this->ptrInSchema && isset($schemaDataOrig)) {
             $tmp = json_encode($schemaDataOrig);
-            if ($tmp === false) {
+            if ($tmp === false) { // @codeCoverageIgnoreStart
                 throw new ExitCode('Failed to encode JSON', 1);
-            }
+            } // @codeCoverageIgnoreEnd
             $schemaDataResult = json_decode($tmp);
 
             $defs = JsonPointer::get($s, JsonPointer::splitPath(rtrim($this->defsPtr, '/')));
@@ -178,9 +178,9 @@ class BuildSchema extends Base
             JsonPointer::add($schemaDataResult, JsonPointer::splitPath($this->ptrInSchema), $s);
 
             $tmp = json_encode($schemaDataResult);
-            if ($tmp === false) {
+            if ($tmp === false) { // @codeCoverageIgnoreStart
                 throw new ExitCode('Failed to encode JSON', 1);
-            }
+            } // @codeCoverageIgnoreEnd
             $schemaDataResult = json_decode($tmp);
             $diff = new JsonDiff($schemaDataOrig, $schemaDataResult, JsonDiff::REARRANGE_ARRAYS);
             $this->out = $diff->getRearranged();

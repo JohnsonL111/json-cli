@@ -22,8 +22,13 @@ docker-lint:
 test:
 	@php -derror_reporting="E_ALL & ~E_DEPRECATED" vendor/bin/phpunit
 
+test-verbose:
+	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage --debug --testdox -v
+
 test-coverage:
-	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-text
+	@php -derror_reporting="E_ALL & ~E_DEPRECATED" -dxdebug.mode=coverage vendor/bin/phpunit --coverage-text --coverage-html build/coverage
+	@echo ""
+	@echo "HTML report: build/coverage/index.html"
 
 build-go:
 	@cd tests/assets/go/ && go build ./...

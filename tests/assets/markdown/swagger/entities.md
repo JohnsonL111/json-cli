@@ -7,7 +7,7 @@
 
 
 
-### <a id="contact"></a>Contact
+### <a id="contact"></a> Contact
 Contact information for the owners of the API.
 
 
@@ -19,7 +19,7 @@ Contact information for the owners of the API.
 |`email` |`String`, Format: `email`|The email address of the contact person/organization.   |
 
 
-### <a id="info"></a>Info
+### <a id="info"></a> Info
 General information about the API.
 
 
@@ -34,7 +34,7 @@ General information about the API.
 |`license`           |[`License`](#license), `Object`, `Array`|                                                                                                          |
 
 
-### <a id="license"></a>License
+### <a id="license"></a> License
 
 
 

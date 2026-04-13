@@ -2,11 +2,12 @@
 
 namespace Swaggest\JsonCli\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Swaggest\JsonCli\App;
 use Swaggest\JsonCli\GenJSDoc;
 use Yaoi\Cli\Response;
 
-class GenJSDocTest extends \PHPUnit_Framework_TestCase
+class GenJSDocTest extends TestCase
 {
     public function testSwagger()
     {

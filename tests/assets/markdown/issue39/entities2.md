@@ -6,7 +6,7 @@
 
 
 
-### <a id="anyof0"></a>AnyOf0
+### <a id="anyof0"></a> AnyOf0
 
 
 
@@ -15,7 +15,7 @@
 |`test1` |`String`|
 
 
-### <a id="anyof1"></a>AnyOf1
+### <a id="anyof1"></a> AnyOf1
 
 
 
